@@ -20,7 +20,7 @@ const app = express();
 dotenv.config();
 
 //PORT
-const PORT = process.env.PORT || 7777;
+const PORT = process.env.MYSQL_ADDON_PORT || 7777;
 
 //middlewares
 app.use(
@@ -54,7 +54,7 @@ pool
     //listen
     app.listen(PORT, () => {
       console.log(
-        `Server running on port: http://localhost:${process.env.PORT}`.bgMagenta
+        `Server running on port: http://localhost:${process.env.MYSQL_ADDON_PORT}`.bgMagenta
           .white
       );
     });
